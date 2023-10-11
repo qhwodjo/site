@@ -1,0 +1,171 @@
+.contact{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.contact_container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 25rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+/*====================ASIDE====================*/
+.contact_aside{
+    background: var(--color-primary);
+    padding: 1.1rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.aside_image {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 15rem;
+}
+
+.aside_image img {
+    width: 100%;
+    height: 38vh;
+}
+
+.contact_aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-top: -2rem;
+}
+
+.contact_aside p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact_details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact_socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.contact_socials li {
+    text-align: center;
+}
+
+.contact_socials a{
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.contact_socials a:hover {
+    color: var(--color-bg2);
+}
+
+
+/*==================== FORM ====================*/
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+    margin-top: -2rem;
+}
+
+.form_name{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact_form input{
+    width: 50%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+.contact_form .btn {
+    width: max-content;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+/*============ MEDIA QUERIES -(TABLETS)- ===============*/
+@media screen and (max-width: 1024px) {
+    .contact {
+        margin-bottom: -3rem;
+        margin-top: 5rem;
+    }
+    .aside_image img {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .contact_container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .contact_aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    .contact_form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+}
+
+/*============ MEDIA QUERIES -(TABLETS)- ===============*/
+@media screen and (max-width: 600px) {
+   .contact_container{
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+   } 
+   .aside_image img {
+    width: 100%;
+    height: 90%;
+   }
+   .contact_form {
+    /*align-self: center;
+    margin-left: 4rem;*/
+    margin: 0 1.5rem 3rem;
+   }
+   .contact_form .btn {
+    width: max-content;
+    margin-left: auto;
+   }
+   .form_name{
+    flex-direction: column;
+   }
+   .form_name input[type="text"] {
+        width: 100%;
+   }
+   input[type="email"] {
+    width: 100%;
+   }
+
+}
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h4{
+            font-size: 24px;
+            margin: 0;
+        }
+        .nav.menu{
+            display: none;
+            list-style: none;
+        }
+        .nav.menu li{
+            margin-bottom: 10px;
+        }
+        .nav.menu li a{
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        #open-menu-btn,
+        #close-menu-btn{
+            display: bl;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        @media (max-width :768px) {
+            .nav.menu{
+                display: flex;
+                flex-direction: column;
+            }
+            #open-menu-btn{
+                display: block;
+            }
+            #close-menu-btn{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container nav_container">
+            <nav>
+                <a href="home.html"><h4>Sodji</h4></a>
+                <ul class="nav_menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+                <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+             </nav>
+        </div>
+<script>
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const menu = document.querySelector('.nav_menu');
+        
+        openMenuBtn.addEventListener('click', () => {
+            menu.Style.display  = 'block';
+            openMenuBtn.stlye.display = 'none';
+            closeMenuBtn.style.display = 'block';
+        });
+        
+        closeMenuBtn.addEventListener('click', () => {
+            menu.Style.display  = 'none';
+            openMenuBtn.stlye.display = 'block';
+            closeMenuBtn.style.display = 'none';
+        });
+
+        function toggleMenu(){
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active'); 
+        }
+        document.getElementById('open-menu-btn').addEventListener('click', toggleMenu);
+        document.getEventListener('click', toggleMenu);
+</script>
+</body>
+</html>
